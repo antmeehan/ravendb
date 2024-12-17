@@ -141,7 +141,7 @@ namespace Raven.TestDriver
 
         protected event EventHandler DriverDisposed;
 
-        protected void WaitForIndexing(IDocumentStore store, string database = null, TimeSpan? timeout = null)
+        public static void WaitForIndexing(IDocumentStore store, string database = null, TimeSpan? timeout = null)
         {
             var admin = store.Maintenance.ForDatabase(database);
 
